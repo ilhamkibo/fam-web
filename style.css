@@ -104,7 +104,7 @@ body {
     font-weight: 100;
 }
 
-.about h2 {
+.about h2, .about h5 {
     color: var(--green);
     font-weight: bold;
 }
@@ -135,15 +135,27 @@ transition: all 0.3s ease;
 background-color: #59a6e6;
 }
 
+.hero .img-partner {
+    /* margin-top: -3rem; */
+    margin-bottom: 1rem;
+}
+
 .gallery .slick-dots li button { display: none; }
 
 .contact {
-    margin-top: -3.8rem;
+    /* margin-top: -3.8rem; */
     padding-top: 4rem;
 }
 
+.partner {
+    /* margin-top: -3.8rem; */
+    padding-top: 4rem;
+    background-color: rgba(130,223,165, 0.6);
+
+}
+
 .main-footer {
-    background-color: #82dfa5;
+    background-color: rgba(130,223,165, 0.6);
     padding: 1rem;
     color: #6c757d;
     font-family: 'Work Sans', sans-serif;
