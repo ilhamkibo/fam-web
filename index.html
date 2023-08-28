@@ -46,13 +46,9 @@
     >
       <main
         data-aos="fade-in"
-        data-aos-duration="1000"
+        data-aos-duration="2000"
         class="d-flex flex-column align-items-center"
       >
-        <div class="text-center img-partner">
-          <h6 style="font-family: 'Alegreya SC'">Our Partnership</h6>
-          <img src="img/partnership3.png" alt="" />
-        </div>
         <img
           src="img/black-logo.png"
           alt="EcoFusion-Designs"
@@ -64,6 +60,10 @@
           >Read More
           <i class="moving-element fa fa-arrow-down" aria-hidden="true"></i>
         </a>
+        <div class="text-center img-partner">
+          <h6 style="font-family: 'Alegreya SC'">Our Partnership</h6>
+          <img src="img/partnership3.png" alt="" />
+        </div>
       </main>
     </section>
 
@@ -104,7 +104,7 @@
           <div class="offcanvas-body">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="#hero">Home</a>
-              <a class="nav-link active" href="#about">About Us</a>
+              <a class="nav-link aboutus-link" href="#about">About Us</a>
               <a class="nav-link" href="#gallery">Gallery</a>
               <!-- <a class="nav-link" href="#partner">Partnership</a> -->
               <a class="nav-link" href="#contact">Contact Us</a>
@@ -165,13 +165,14 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <h5>Our position in supply chain industry</h5>
+        <div class="row position">
+          <div class="col-xl-12 col-lg-12 col-md-12 text-center">
+            <h5 class="text-start position-text">
+              Our position in supply chain industry
+            </h5>
             <img
               src="img/Transp_Supply-Chain-1536x1086.png"
-              width="1000px"
-              alt=""
+              alt="position-in-supply-chain"
             />
           </div>
         </div>
@@ -345,12 +346,12 @@
             </div>
             <div class="adress mt-4">
               <span
-                ><strong>Addres:</strong> Jl. Plepah Timur 3 No. 59, Plupuh,
-                Sragen, Jawa Tengah</span
+                ><strong>Addres:</strong> Dk. Jabung, RT 001/RW 001, Desa
+                Jabung, Kec. Plupuh, Kabupaten Sragen - Jawa Tengah</span
               >
             </div>
             <div class="number mt-1">
-              <span><strong>Contact:</strong> +62 812-9199-9605</span>
+              <span><strong>Contact:</strong> +62 812-9122-1958</span>
             </div>
           </div>
           <div
@@ -495,6 +496,18 @@
             navLinks.forEach((link) => link.classList.remove("active"));
             this.classList.add("active");
           });
+        });
+      });
+
+      const readLink = document.querySelector(".about-link");
+
+      readLink.addEventListener("click", () => {
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          console.log(link);
+          link.classList.remove("active");
+          const aboutUsLink = document.querySelector(".aboutus-link");
+          aboutUsLink.classList.add("active");
         });
       });
     </script>
