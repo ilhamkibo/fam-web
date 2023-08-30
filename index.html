@@ -217,29 +217,39 @@
             <h2>Our Gallery</h2>
           </div>
         </div>
-        <div
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-          class="row gallery-up mt-4"
-        >
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-1">
+        <div class="row gallery-up mt-4">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="col-lg-3 col-md-6 col-sm-6 col-6 mt-1"
+          >
             <div class="card">
               <img src="img/3.jpg" alt="EcoFusion" />
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-1">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="col-lg-3 col-md-6 col-sm-6 col-6 mt-1"
+          >
             <div class="card">
               <img src="img/2.jpg" alt="EcoFusion" />
             </div>
           </div>
           <div
-            class="col-lg-3 col-md-6 col-sm-6 mt-1 d-flex align-items-center"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="col-lg-3 col-md-6 col-sm-6 col-6 mt-1 d-flex align-items-center"
           >
             <div class="card">
               <img src="img/1.jpg" alt="EcoFusion" />
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-1">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            class="col-lg-3 col-md-6 col-sm-6 col-6 mt-1"
+          >
             <div class="card">
               <img src="img/4.jpg" alt="EcoFusion" />
             </div>
@@ -420,18 +430,7 @@
               </div>
               <button
                 type="button"
-                onclick="
-                if(document.getElementById('email').value === '' || document.getElementById('name').value === '' || document.getElementById('message').value === ''  ) { 
-                  if(document.getElementById('name').value === '') {
-                    alert('Please insert name');
-                  } else if (document.getElementById('email').value === '') {
-                    alert('Please insert email');
-                  } else {
-                    alert('Please insert message');
-                  }
-                } else { 
-                  sendEmail(); 
-                }"
+                onclick="sendEmail()"
                 class="btn btn-dark bg-transparent text-dark"
               >
                 Send Message
@@ -561,30 +560,44 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail() {
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "ilham.ilam59@gmail.com",
-          Password: "AEF2770E5B8AF66307CC720DE62AFA68111C",
-          To: [
-            "info@ecofusion.info",
-            "ilham.ilam59@gmail.com",
-            "info.fampower@gmail.com",
-          ],
-          From: "ilham.ilam59@gmail.com",
-          Subject: "New Contact Form Inquiry",
-          Body:
-            "Name: " +
-            document.getElementById("name").value +
-            "<br> Email: " +
-            document.getElementById("email").value +
-            "<br> NMessage: " +
-            document.getElementById("message").value,
-        }).then((message) => {
-          alert("Email sent succesfully!");
-          document.getElementById("name").value = null;
-          document.getElementById("email").value = null;
-          document.getElementById("message").value = null;
-        });
+        if (
+          document.getElementById("email").value === "" ||
+          document.getElementById("name").value === "" ||
+          document.getElementById("message").value === ""
+        ) {
+          if (document.getElementById("name").value === "") {
+            alert("Please insert name");
+          } else if (document.getElementById("email").value === "") {
+            alert("Please insert email");
+          } else {
+            alert("Please insert message");
+          }
+        } else {
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "ilham.ilam59@gmail.com",
+            Password: "AEF2770E5B8AF66307CC720DE62AFA68111C",
+            To: [
+              "info@ecofusion.info",
+              "ilham.ilam59@gmail.com",
+              "info.fampower@gmail.com",
+            ],
+            From: "ilham.ilam59@gmail.com",
+            Subject: "New Contact Form Inquiry",
+            Body:
+              "Name: " +
+              document.getElementById("name").value +
+              "<br> Email: " +
+              document.getElementById("email").value +
+              "<br> NMessage: " +
+              document.getElementById("message").value,
+          }).then((message) => {
+            alert("Email sent succesfully!");
+            document.getElementById("name").value = null;
+            document.getElementById("email").value = null;
+            document.getElementById("message").value = null;
+          });
+        }
       }
     </script>
 

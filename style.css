@@ -285,6 +285,11 @@ text-decoration: underline;
         font-size: 50%;
     }
     
+    .hero main {
+        margin-top: 4rem;
+        padding-top: 4rem;
+    }
+
     .logo-image {
         width: 30%;
     }
@@ -297,12 +302,6 @@ text-decoration: underline;
         display: inline-block !important;
     }
   
-    .main-footer .float-left,
-    .main-footer .float-right {
-    float: none !important;
-    text-align: center;
-    }
-  
     .about .position img, .hero .img-partner img{
         width: 300px;
     }
@@ -312,7 +311,9 @@ text-decoration: underline;
         margin-top: 1rem;
     }
 
-    .hero main {
-        margin-top: 4rem;
+    .main-footer .float-left,
+    .main-footer .float-right {
+    float: none !important;
+    text-align: center;
     }
 }
