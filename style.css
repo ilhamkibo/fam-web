@@ -10,6 +10,11 @@ body {
     font-family: 'Averia Serif Libre', sans-serif;
 }
 
+
+.section-title h2, .position h4, .section-title h3 {
+    color: #aa7b05;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -23,20 +28,33 @@ body {
     z-index: -1;
 }
 
-.hero h1 {
-    text-shadow: var(--shadow);
-}
-
 .hero {
     position: relative;
     min-height: 100vh;
     background-size: contain;
 }
 
+.hero .img-partner img {
+    width: 800px;
+}
+
+.hero .img-powered img {
+    width: 100px;
+}
+
+.hero .img-powered .powered-content {
+    width: 150px;
+}
+
+.hero .img-powered h6 {
+    font-size: 0.7rem;
+}
+
 .hero h1 {
     font-family: 'Averia Serif Libre', serif;
     font-size: 4rem;
     color: #aa7b05;
+    text-shadow: var(--shadow);
 }
 
 .hero h3 {
@@ -56,17 +74,8 @@ body {
     /* border-color: #aa7b05 !important; */
 }
 
-.section-title h2, .position h4, .section-title h3 {
-    color: #aa7b05;
-}
-
 .hero .img-partner {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.hero .img-partner img {
-    width: 800px;
+    margin-top: 3rem;
 }
 
 .moving-element {
@@ -95,7 +104,6 @@ body {
     font-size: 1.5rem;
     /* color: #aa7b05 ; */
 }
-
 
 .mynavbar .offcanvas-title {
     font-family: 'Averia Serif Libre', serif;
@@ -302,5 +310,9 @@ text-decoration: underline;
     .about .position .position-text {
         text-align: center !important;
         margin-top: 1rem;
+    }
+
+    .hero main {
+        margin-top: 4rem;
     }
 }
