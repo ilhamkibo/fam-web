@@ -23,7 +23,7 @@ body {
     z-index: -1;
 }
 
-.hero h1, .hero h3 {
+.hero h1 {
     text-shadow: var(--shadow);
 }
 
@@ -41,7 +41,7 @@ body {
 
 .hero h3 {
     font-family: 'Averia Serif Libre', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #aa7b05;
 }
 
@@ -50,12 +50,13 @@ body {
     background-color: rgba(241, 227, 227, 0.2);
 }
 
-.section-title h2, .position h4, .section-title h3 {
-    color: #aa7b05;
-}
-
 .hero a:hover {
     background-color: var(--bg);
+    color: #aa7b05;
+    /* border-color: #aa7b05 !important; */
+}
+
+.section-title h2, .position h4, .section-title h3 {
     color: #aa7b05;
 }
 
@@ -73,10 +74,10 @@ body {
 }
 
 .active {
-    color: #aa7b05 !important; /* Warna yang diinginkan untuk link aktif */
+    color: #836007 !important; /* Warna yang diinginkan untuk link aktif */
     font-weight: bold; /*Atur gaya tebal untuk link aktif*/
-    background-color: #000000;
-    border-radius: 50%;
+    /* background-color: #000000; */
+    /* border-radius: 50%; */
 }
 
 .mynavbar {
@@ -162,10 +163,15 @@ background-color: #59a6e6;
     padding-top: 4rem;
 }
 
+.contact .maps a:hover, .contact button:hover {
+    color: #aa7b05 !important;
+    background-color: #000000 !important;
+}
+
 .main-footer {
     background-color: rgba(12, 104, 47, 0.6);
     padding: 1rem;
-    color: #6c757d;
+    color: #000000;
     font-family: 'Work Sans', sans-serif;
 }
 
