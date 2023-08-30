@@ -420,7 +420,18 @@
               </div>
               <button
                 type="button"
-                onclick="sendEmail()"
+                onclick="
+                if(document.getElementById('email').value === '' || document.getElementById('name').value === '' || document.getElementById('message').value === ''  ) { 
+                  if(document.getElementById('name').value === '') {
+                    alert('Please insert name');
+                  } else if (document.getElementById('email').value === '') {
+                    alert('Please insert email');
+                  } else {
+                    alert('Please insert message');
+                  }
+                } else { 
+                  sendEmail(); 
+                }"
                 class="btn btn-dark bg-transparent text-dark"
               >
                 Send Message
