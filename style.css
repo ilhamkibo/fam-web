@@ -126,6 +126,17 @@ body {
     width: 850px;
 }
 
+.about .about-right p {
+    font-size: 1.1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about .about-right h3 {
+    text-align: center;
+    text-justify: inter-word;
+}
+
 .about h2, .about h5 {
     font-weight: bold;
 }
