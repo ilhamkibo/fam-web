@@ -488,11 +488,22 @@
     <script>
       const hamburger = document.querySelector(".navbar-toggler");
       const offCanvas = document.querySelector(".offcanvas");
+      const offCanvas1 = new bootstrap.Offcanvas(
+        document.querySelector(".offcanvas")
+      );
       const stickyTop = document.querySelector(".sticky-top");
+      const navCanvas = document.querySelectorAll(".nav-link");
+
+      navCanvas.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          offCanvas1.hide();
+        });
+      });
 
       hamburger.addEventListener("click", () => {
         stickyTop.style.overflow = "visible";
       });
+
       offCanvas.addEventListener("hidden.bs.offcanvas", () => {
         stickyTop.style.overflow = "hidden";
       });
@@ -513,7 +524,6 @@
       readLink.addEventListener("click", () => {
         const navLinks = document.querySelectorAll(".nav-link");
         navLinks.forEach((link) => {
-          console.log(link);
           link.classList.remove("active");
           const aboutUsLink = document.querySelector(".aboutus-link");
           aboutUsLink.classList.add("active");
@@ -525,7 +535,6 @@
       logoLink.addEventListener("click", () => {
         const navLinks = document.querySelectorAll(".nav-link");
         navLinks.forEach((link) => {
-          console.log(link);
           link.classList.remove("active");
           const homeLink = document.querySelector(".home-link");
           homeLink.classList.add("active");
