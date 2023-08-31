@@ -277,6 +277,10 @@ text-decoration: underline;
         text-align: center !important;
         margin-top: 1rem;
     }
+
+    .hero .img-powered img {
+        width: 80px;
+    }
 }
 
 /* mobile phone */
@@ -288,6 +292,10 @@ text-decoration: underline;
     .hero main {
         margin-top: 4rem;
         padding-top: 4rem;
+    }
+
+    .hero .img-powered img {
+        width: 60px;
     }
 
     .logo-image {
